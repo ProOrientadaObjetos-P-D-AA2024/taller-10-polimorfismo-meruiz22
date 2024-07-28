@@ -8,13 +8,17 @@ package problema1;
  *
  * @author Usuario
  */
+
+
 public abstract class Personaje {
 
+    // Declarando  las variables de tipo protegido  
     protected String nombre;
     protected double vida;
     protected int nivel;
     protected double experiencia;
 
+   //Constructor
     public Personaje(String nombre, double vida, int nivel, double experiencia) {
         this.nombre = nombre;
         this.vida = vida;
@@ -22,6 +26,7 @@ public abstract class Personaje {
         this.experiencia = experiencia;
     }
 
+    // Getters and Setters
     public String getNombre() {
         return nombre;
     }
@@ -54,15 +59,18 @@ public abstract class Personaje {
         this.experiencia = experiencia;
     }
 
+    //Metodos abstracto que heredan la clase hija 
     public abstract void atacar(Personaje enemigo);
 
     public abstract void defender();
 
+    // Metodo para elimibar vida de los persomajes 
     public void quitarVida(double daño) {
         vida = vida - daño;
 
     }
 
+    // Metodo para subir nivel 
     public void subirNivel() {
         int nivel = getNivel();
         int subir = nivel + 1;

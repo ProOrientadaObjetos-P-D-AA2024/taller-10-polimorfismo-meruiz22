@@ -6,8 +6,11 @@ package problema1;
 
 
 public class Guerrero extends Personaje {
+   
+    // Declaracion de variable 
     private double fuerza;
 
+    // Constructor con atrributos heredados de la clase personaje
     public Guerrero( String nombre, double vida, int nivel, double experiencia,double fuerza) {
         super(nombre, vida, nivel, experiencia);
         this.fuerza = fuerza;
@@ -21,6 +24,7 @@ public class Guerrero extends Personaje {
         this.fuerza = fuerza;
     }
 
+    // Metodos abstractos de la clasepersonaje implementados por la clase 
     @Override
     public void atacar(Personaje enemigo) {
         System.out.println("El guerrro "+nombre+" ataca con su espada");

@@ -4,11 +4,13 @@
  */
 package problema1;
 
-
 public class Mago extends Personaje {
-   private double podermagico;
 
-    public Mago( String nombre, double vida, int nivel, double experiencia,double podermagico) {
+    // Declaracion de variable 
+    private double podermagico;
+
+    // Constructor con atrributos heredados de la clase personaje
+    public Mago(String nombre, double vida, int nivel, double experiencia, double podermagico) {
         super(nombre, vida, nivel, experiencia);
         this.podermagico = podermagico;
     }
@@ -21,19 +23,19 @@ public class Mago extends Personaje {
         this.podermagico = podermagico;
     }
 
+    // Metodos abstractos de la clasepersonaje implementados por la clase 
     @Override
     public void atacar(Personaje enemigo) {
-        System.out.println("El mago "+nombre+" usa un hechizo de ataque");
+        System.out.println("El mago " + nombre + " usa un hechizo de ataque");
         enemigo.quitarVida(podermagico);
-       
+
     }
 
     @Override
     public void defender() {
-        
-        System.out.println("El mago "+nombre+"activa una barrera magica");
+
+        System.out.println("El mago " + nombre + "activa una barrera magica");
 
     }
-   
-   
+
 }

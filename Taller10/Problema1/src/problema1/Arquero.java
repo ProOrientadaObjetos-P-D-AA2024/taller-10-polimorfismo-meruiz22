@@ -7,8 +7,10 @@ package problema1;
 
 public class Arquero extends Personaje {
 
+    // Declaracion de variable 
     private double flecha;
 
+    // Constructor con atrributos heredados de la clase personaje
     public Arquero( String nombre, double vida, int nivel, double experiencia,double flecha) {
         super(nombre, vida, nivel, experiencia);
         this.flecha = flecha;
@@ -21,6 +23,7 @@ public class Arquero extends Personaje {
         this.flecha = flecha;
     }
 
+    // Metodos abstractos de la clasepersonaje implementados por la clase 
     @Override
     public void atacar(Personaje enemigo) {
         System.out.println("El arquero "+nombre+" dispara una flecha");

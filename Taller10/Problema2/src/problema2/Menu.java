@@ -4,10 +4,33 @@
  */
 package problema2;
 
-/**
- *
- * @author Usuario
- */
-public class Menu {
+public abstract class Menu {
+
+    // Declarando atributos
+    protected String nombrePlato;
+    protected double valorMenu;
     
+    // Constructor
+    public Menu(String nombrePlato) {
+        this.nombrePlato = nombrePlato;
+    }
+
+    // Metodos abstractos 
+    public abstract void calcularValor();
+
+    public String getNombrePlato() {
+        return nombrePlato;
+    }
+
+    public double getValorMenu() {
+        return valorMenu;
+    }
+    
+     @Override
+    public String toString() {
+        return"Nombre del Plato:" + nombrePlato + " -Valor del Menú: "+valorMenu;
+    }
 }
+    
+
+
